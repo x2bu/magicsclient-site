@@ -6,7 +6,7 @@
 // Edit the values to match your build. Leave a string empty ("") to hide it.
 // ---------------------------------------------------------------------------
 const REQUIREMENTS = {
-  minecraft: "1.21.1",   // Minecraft version this build targets
+  minecraft: "1.21.11",  // Minecraft version this build targets
   loader: "Fabric",      // Mod loader
   java: "21+",           // Minimum Java version
 };
@@ -42,19 +42,34 @@ const RELEASES = [
 // ---------------------------------------------------------------------------
 const FEATURES = [
   {
-    icon: "⚡",
-    title: "Lightweight",
-    text: "TODO: describe a real feature — e.g. minimal performance overhead.",
+    icon: "🆓",
+    title: "Completely free",
+    text: "No paid tiers, no keys to buy, no resellers. Pick a build, download it, done.",
+  },
+  {
+    icon: "🔒",
+    title: "HWID-locked",
+    text: "Every build is tied to the machine that runs it, so it can't be copied, re-uploaded, or repackaged as a ratted version the way cracked clients usually are.",
   },
   {
     icon: "🧩",
-    title: "Fabric-native",
-    text: "TODO: describe how it integrates with Fabric / Fabric API.",
+    title: "All the modules — plus extras",
+    text: "The full set of core modules you already know, rebuilt from scratch under a new name, with a few extra modules on top.",
   },
   {
-    icon: "🎛️",
-    title: "Configurable",
-    text: "TODO: describe what players can toggle or customize.",
+    icon: "⚡",
+    title: "Lightweight & Fabric-native",
+    text: "Built on Fabric for Minecraft 1.21.11. Low overhead, fast launch, no bloat.",
+  },
+  {
+    icon: "🔄",
+    title: "Actively updated",
+    text: "New modules and fixes ship regularly — grab the latest build from the download section.",
+  },
+  {
+    icon: "💬",
+    title: "Discord support",
+    text: "Questions, bug reports, or module requests? Join the Discord — links are in the header and footer.",
   },
 ];
 
@@ -66,8 +81,10 @@ const CHANGELOG = [
     version: "1.0.0",
     date: "2026-07-10",
     notes: [
-      "TODO: describe what changed in this version",
-      "TODO: another line item",
+      "Initial public release for Minecraft 1.21.11 (Fabric).",
+      "Full rewrite and rebrand — every core module rebuilt from scratch on new code.",
+      "Added HWID lock so builds can't be copied or repackaged as ratted versions.",
+      "Added several extra modules beyond the original client.",
     ],
   },
 ];

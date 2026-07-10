@@ -15,7 +15,7 @@ the page re-renders itself:
 
 Other content:
 
-- **Description / tagline:** edit the `TODO` comments in `index.html`.
+- **Tagline / About / Discord link:** edit the hero, `#about`, nav, and footer in `index.html`.
 - **Install steps:** the `#install` section in `index.html` (generic Fabric flow).
 - **Styling:** `css/style.css`.
 

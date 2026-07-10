@@ -85,6 +85,24 @@ a {
   color: var(--text);
 }
 
+.nav-links a.discord {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+.nav-links a.discord:hover {
+  text-shadow: 0 0 18px var(--purple-glow);
+}
+
+.site-footer a.discord {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+.site-footer a.discord:hover {
+  text-decoration: underline;
+}
+
 main {
   max-width: 960px;
   margin: 0 auto;
