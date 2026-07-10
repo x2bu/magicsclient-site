@@ -1,6 +1,8 @@
 {
   "name": "magicsclient-site",
   "compatibility_date": "2026-07-10",
+  // NOTE: workers_dev must stay true and routes must stay commented until
+  // magicsclient.shop is an Active Cloudflare zone. Do not re-run old builds.
   // Keep the workers.dev URL enabled. (Adding routes disables it by default
   // unless this is set true.) Do not remove this line.
   "workers_dev": true,
