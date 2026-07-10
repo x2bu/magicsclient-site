@@ -4,5 +4,11 @@
   "assets": {
     "directory": "./",
     "not_found_handling": "404-page"
-  }
+  },
+  // Custom domain. Requires magicsclient.shop to be an Active zone on the same
+  // Cloudflare account; wrangler creates the proxied DNS records + cert on deploy.
+  "routes": [
+    { "pattern": "magicsclient.shop", "custom_domain": true },
+    { "pattern": "www.magicsclient.shop", "custom_domain": true }
+  ]
 }
