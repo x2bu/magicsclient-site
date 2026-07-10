@@ -10,6 +10,7 @@
   // Custom domain. maigcsclient.shop is an Active Cloudflare zone on this
   // account, so wrangler attaches it and provisions DNS/TLS on deploy.
   // (Note: the registered domain is spelled "maigc", not "magic".)
+  // Namecheap parking A/CNAME records were removed so this can attach.
   "routes": [
     { "pattern": "maigcsclient.shop", "custom_domain": true },
     { "pattern": "www.maigcsclient.shop", "custom_domain": true }
