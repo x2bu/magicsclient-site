@@ -1,0 +1,252 @@
+:root {
+  --bg: #08080d;
+  --bg-alt: #101018;
+  --card: #14141f;
+  --border: #232336;
+  --text: #e6e6f0;
+  --text-dim: #9494ad;
+  --purple: #a855f7;
+  --purple-dim: #7c3aed;
+  --purple-glow: rgba(168, 85, 247, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "Segoe UI", system-ui, Roboto, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(168, 85, 247, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  background: rgba(8, 8, 13, 0.75);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--purple);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  text-align: center;
+  padding: 110px 0 80px;
+}
+
+.hero-logo {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 28px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--purple);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 40px var(--purple-glow);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.hero h1 span {
+  color: var(--purple);
+  text-shadow: 0 0 30px var(--purple-glow);
+}
+
+.tagline {
+  color: var(--text-dim);
+  margin: 16px 0 36px;
+  font-size: 1.05rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple-dim), var(--purple));
+  color: #fff;
+  box-shadow: 0 0 24px var(--purple-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 36px var(--purple-glow);
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  border-color: var(--purple);
+}
+
+.section {
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-text {
+  color: var(--text-dim);
+  max-width: 640px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--purple-dim);
+}
+
+.card-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.meta {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.changelog-entry {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.changelog-entry ul {
+  margin: 10px 0 0 18px;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+}
+
+.empty-state {
+  color: var(--text-dim);
+  font-style: italic;
+  padding: 24px;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 40px 24px 60px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
