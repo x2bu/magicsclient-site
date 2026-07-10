@@ -125,8 +125,38 @@ main {
 
 .tagline {
   color: var(--text-dim);
-  margin: 16px 0 36px;
+  margin: 16px 0 24px;
   font-size: 1.05rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 0 32px;
+}
+
+.badge {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.badge b {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -230,6 +260,159 @@ main {
   border-radius: 14px;
 }
 
+/* Features grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.feature {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.feature:hover {
+  border-color: var(--purple-dim);
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.feature p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+/* Installation steps */
+.steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 680px;
+}
+
+.steps li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--purple);
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.steps a {
+  color: var(--purple);
+}
+
+.steps a:hover {
+  text-decoration: underline;
+}
+
+.steps code,
+.download-note code {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 7px;
+  font-size: 0.85em;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+
+.path-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 4px;
+  flex-wrap: wrap;
+}
+
+.copy-btn {
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 12px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.copy-btn:hover {
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+.copy-btn.copied {
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+.hint {
+  display: block;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}
+
+.download-note {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  margin-top: 16px;
+}
+
+/* Scroll reveal.
+   Content is visible by default; JS adds `.reveal-init` to hide it, so if JS
+   fails (or is disabled) nothing is ever stuck invisible. */
+.reveal.reveal-init {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.reveal-init.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal.reveal-init {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .site-footer {
   text-align: center;
   padding: 40px 24px 60px;
@@ -237,9 +420,28 @@ main {
   font-size: 0.85rem;
 }
 
+@media (max-width: 640px) {
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 560px) {
   .hero h1 {
     font-size: 2.1rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
   }
   .card {
     flex-direction: column;

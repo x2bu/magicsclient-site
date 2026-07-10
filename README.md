@@ -5,10 +5,22 @@ under `magicsclient.shop`.
 
 ## Editing content
 
-- **Downloads / changelog:** edit `js/downloads.js`. Add or remove objects in
-  the `RELEASES` and `CHANGELOG` arrays — nothing else needs to change.
+Almost everything lives in `js/downloads.js` — edit the arrays/objects there and
+the page re-renders itself:
+
+- **Requirements pills** (hero): `REQUIREMENTS` (Minecraft / loader / Java).
+- **Downloads:** `RELEASES` — newest first; set `primary: true` on the recommended build.
+- **Features grid:** `FEATURES` — 3–6 short items. Empty array hides the section.
+- **Changelog:** `CHANGELOG` — newest first.
+
+Other content:
+
 - **Description / tagline:** edit the `TODO` comments in `index.html`.
+- **Install steps:** the `#install` section in `index.html` (generic Fabric flow).
 - **Styling:** `css/style.css`.
+
+> All user-editable strings are HTML-escaped at render time, so mod names,
+> versions, and notes are safe to paste in as-is.
 
 ## Deploying (GitHub auto-deploy)
 

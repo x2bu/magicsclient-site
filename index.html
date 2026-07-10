@@ -7,6 +7,17 @@
   <meta name="description" content="MagicsClient is a lightweight Fabric client mod. Download the latest build below." />
   <meta name="theme-color" content="#0a0a12" />
   <meta name="referrer" content="no-referrer" />
+
+  <!-- Link previews (Discord, etc.). Update og:url to your real domain. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MagicsClient — Fabric Client Mod" />
+  <meta property="og:description" content="A lightweight Fabric client mod. Download the latest build." />
+  <meta property="og:url" content="https://magicsclient.shop/" />
+  <meta property="og:site_name" content="MagicsClient" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MagicsClient — Fabric Client Mod" />
+  <meta name="twitter:description" content="A lightweight Fabric client mod. Download the latest build." />
+
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a12'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23a855f7' font-family='monospace'%3EM%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -18,6 +29,8 @@
       <a href="#top" class="logo">Magics<span>Client</span></a>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
         <a href="#download">Download</a>
         <a href="#changelog">Changelog</a>
       </div>
@@ -25,14 +38,20 @@
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero reveal">
       <div class="hero-logo" aria-hidden="true">M</div>
       <h1>Magics<span>Client</span></h1>
       <p class="tagline"><!-- TODO: replace with your real tagline --> A lightweight Fabric client mod.</p>
-      <a href="#download" class="btn btn-primary">Get the latest build</a>
+      <div id="hero-badges" class="hero-badges" aria-label="Requirements">
+        <!-- populated by js/main.js from REQUIREMENTS -->
+      </div>
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary">Get the latest build</a>
+        <a href="#install" class="btn btn-secondary">How to install</a>
+      </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
       <h2>About</h2>
       <p class="about-text">
         <!-- TODO: replace with a real description of the mod, what it does, what versions of Fabric/Minecraft it supports -->
@@ -42,14 +61,67 @@
       </p>
     </section>
 
-    <section id="download" class="section">
+    <section id="features" class="section reveal">
+      <h2>Features</h2>
+      <div id="feature-grid" class="feature-grid">
+        <!-- populated by js/main.js from FEATURES -->
+      </div>
+    </section>
+
+    <section id="install" class="section reveal">
+      <h2>Installation</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <div>
+            <strong>Install the Fabric loader.</strong>
+            Grab it from <a href="https://fabricmc.net/use/installer/" rel="noopener noreferrer nofollow">fabricmc.net</a>
+            and run it for your Minecraft version.
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <div>
+            <strong>Install Fabric API.</strong>
+            Most Fabric mods need it — download the build matching your Minecraft version.
+          </div>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <div>
+            <strong>Download MagicsClient</strong> from the
+            <a href="#download">Download</a> section below.
+          </div>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <div>
+            <strong>Drop the <code>.jar</code> into your mods folder.</strong>
+            <div class="path-row">
+              <code id="mods-path">%appdata%\.minecraft\mods</code>
+              <button type="button" class="copy-btn" data-copy="#mods-path" aria-label="Copy mods folder path">Copy</button>
+            </div>
+            <span class="hint">On macOS/Linux: <code>~/.minecraft/mods</code></span>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">5</span>
+          <div>
+            <strong>Launch Minecraft</strong> using the <em>Fabric</em> profile. That's it.
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="download" class="section reveal">
       <h2>Download</h2>
       <div id="download-list" class="card-list">
         <!-- populated by js/main.js from js/downloads.js -->
       </div>
+      <p class="download-note">Only download builds from this page. Verify the file before running it.</p>
     </section>
 
-    <section id="changelog" class="section">
+    <section id="changelog" class="section reveal">
       <h2>Changelog</h2>
       <div id="changelog-list" class="card-list changelog-list">
         <!-- populated by js/main.js from js/downloads.js -->
