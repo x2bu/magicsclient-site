@@ -1,14 +1,22 @@
 {
   "name": "magicsclient-site",
   "compatibility_date": "2026-07-10",
+  // Keep the workers.dev URL enabled. (Adding routes below disables it by
+  // default unless this is set true.)
+  "workers_dev": true,
   "assets": {
     "directory": "./",
     "not_found_handling": "404-page"
-  },
-  // Custom domain. Requires magicsclient.shop to be an Active zone on the same
-  // Cloudflare account; wrangler creates the proxied DNS records + cert on deploy.
-  "routes": [
-    { "pattern": "magicsclient.shop", "custom_domain": true },
-    { "pattern": "www.magicsclient.shop", "custom_domain": true }
-  ]
+  }
+
+  // --- Custom domain (magicsclient.shop) ---
+  // Do NOT uncomment until the zone is ACTIVE on this Cloudflare account
+  // (nameservers delegated at the registrar). While the zone is Pending, this
+  // route makes `wrangler deploy` FAIL and blocks all deploys. Once Active,
+  // uncomment and push — wrangler will attach the domain + provision DNS/TLS.
+  //
+  // "routes": [
+  //   { "pattern": "magicsclient.shop", "custom_domain": true },
+  //   { "pattern": "www.magicsclient.shop", "custom_domain": true }
+  // ]
 }
