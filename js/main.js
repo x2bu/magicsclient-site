@@ -51,18 +51,22 @@
     downloadList.innerHTML = RELEASES.map((r) => {
       const primary = r.primary ? "btn-primary" : "btn-secondary";
       const latest = r.primary ? ' <span class="meta">latest</span>' : "";
+      const title = r.name ? esc(r.name) : `v${esc(r.version)}`;
       const metaBits = [
+        r.name && r.version ? `v${r.version}` : null,
         r.loader || "Fabric",
         r.mcVersion ? `MC ${r.mcVersion}` : null,
         r.size || null,
       ].filter(Boolean).map(esc).join(" · ");
+      // `download` only takes effect for same-origin files; ignored cross-origin.
+      const dl = /^https?:/i.test(r.url) ? "" : " download";
       return `
         <div class="card">
           <div class="card-info">
-            <h3>v${esc(r.version)}${latest}</h3>
+            <h3>${title}${latest}</h3>
             <p class="meta">${metaBits}</p>
           </div>
-          <a class="btn ${primary}" href="${esc(r.url)}" rel="noopener noreferrer">Download</a>
+          <a class="btn ${primary}" href="${esc(r.url)}"${dl} rel="noopener noreferrer">Download</a>
         </div>
       `;
     }).join("");

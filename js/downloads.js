@@ -16,15 +16,25 @@ const REQUIREMENTS = {
 // To publish a build: add an object. To take one down: delete or comment it out.
 // ---------------------------------------------------------------------------
 const RELEASES = [
-  // {
-  //   version: "1.0.0",
-  //   mcVersion: "1.21.1",
-  //   loader: "Fabric",
-  //   date: "2026-07-10",
-  //   url: "https://github.com/yourname/yourrepo/releases/download/v1.0.0/magicsclient-1.0.0.jar",
-  //   size: "1.2 MB",
-  //   primary: true       // marks the recommended/latest build
-  // }
+  {
+    name: "Krypton Client",
+    version: "1.21.11",
+    mcVersion: "1.21.11",
+    loader: "Fabric",
+    date: "2026-07-10",
+    url: "/downloads/krypton-client-1.21.11.jar",
+    size: "5.4 MB",
+    primary: true, // marks the recommended/latest build
+  },
+  {
+    name: "HypixelHelper",
+    version: "1.0.0",
+    mcVersion: "1.21.11",
+    loader: "Fabric",
+    date: "2026-07-10",
+    url: "/downloads/hypixelhelper.jar",
+    size: "4.1 MB",
+  },
 ];
 
 // ---------------------------------------------------------------------------
