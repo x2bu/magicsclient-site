@@ -1,7 +1,7 @@
 # magicsclient-site
 
-Static landing/download page for MagicsClient, deployed on Cloudflare Pages
-under `magicsclient.shop`.
+Static landing/download page for MagicsClient, deployed on Cloudflare Workers
+under `maigcsclient.shop` (note: the registered domain is spelled "maigc").
 
 ## Editing content
 
@@ -46,7 +46,7 @@ wrangler pages deploy . --project-name=magicsclient-site
   same-origin. The `_headers` file enforces this with a strict
   Content-Security-Policy so nothing third-party can be added by accident.
 - `Referrer-Policy: no-referrer` means GitHub (or wherever the download link
-  points) never sees `magicsclient.shop` in its referer logs.
+  points) never sees `maigcsclient.shop` in its referer logs.
 - Cloudflare Pages has no origin server to expose — DNS only ever points at
   Cloudflare's edge, never a machine you control.
 - Registrar and GitHub-side hygiene (WHOIS privacy, noreply commit email,
